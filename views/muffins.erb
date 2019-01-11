@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+
+      <div class="col-sm">
+        <h3>Red Velvet CheeseCake </h3>
+        <div class="card" style="width: 18rem;" id='card-kadabra'>
+            <ul ng-controller="GalleryCtrl">
+                <li ng-repeat="image in images">
+                  <a ng-click="openLightboxModal($index)">
+                     <img ng-src="{{/photos/cakes/Redvelvet.jpeg}}" class="img-thumbnail">
+                  </a>
+                </li>
+              </ul>
+          <img class="card-img-top" src="/photos/cakes/Redvelvet.jpeg " alt="Card image cap" id="img01">
+          <div class="card-body"> 
+            <div class="card-title"></div>
+            <p class="card-text">The distinct flavors of red velvet cake come from the buttermilk, vinegar, cocoa powder, and cream cheese frosting. Some red velvet cake recipes use only a tablespoon or two of cocoa powder, giving virtually no chocolate flavor. This leads some people to think that red velvet cake is simply a white cake dyed red.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <h3>Blueberry Cake</h3>
+        <div class="card" style="width: 18rem;" id='card-tangela'>
+            <ul ng-controller="GalleryCtrl">
+                <li ng-repeat="image in images">
+                  <a ng-click="openLightboxModal($index)">
+                    <img ng-src="{{/photos/cakes/blueberycake.jpeg}}" class="img-thumbnail">
+                  </a>
+                </li>
+              </ul>
+          <img class="card-img-top" src="/photos/cakes/blueberycake.jpeg" alt="Card image cap" id="img02">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+          </div>    
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <h3>Lemon Cake</h3>
+        <div class="card" style="width: 18rem;" id='card-emboar'>
+         <ul ng-controller="GalleryCtrl">
+                <li ng-repeat="image in images">
+                  <a ng-click="openLightboxModal($index)">
+                    <img ng-src="{{/photos/cakes/blueberycake.jpeg}}" class="img-thumbnail">
+                    </a>
+                </li>
+              </ul>
+          <img class="card-img-top" src="/photos/cakes/lemon.jpeg" alt="Card image cap" id="img03">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img_modal">
+      <div id="caption"></div>
+    </div>
+
