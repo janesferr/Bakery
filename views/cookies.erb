@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="main.css">
 <div id="bg">
   <img class="d-block w-100" id="bg-photo-page" src="bakery1.jpg"</img>
 </div>
@@ -38,7 +39,22 @@ div.desc {
 </style>
 </head>
 <body>
-
+<div class="row my-3">
+  <% @cookies.each do |elem| %>
+    <div class="col-md-4 my-1">
+        <div class="card">
+        <img class="card-img-top" src="<%= elem.src %>" alt="Card image cap" />
+        <div class="card-body">
+            <h5 class="card-title"><%= elem.name %></h5>
+            <p class="card-text"><%= elem.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%=elem.price %></li>
+        </ul>
+        </div>
+    </div>
+  <% end %>
+</div>
 
 
 <div class="container">
@@ -57,7 +73,7 @@ div.desc {
           <img class="card-img-top" src="/photos/cakes/Redvelvet.jpeg " alt="Card image cap" id="img01">
           <div class="card-body"> 
             <div class="card-title"></div>
-            <p class="card-text">The distinct flavors of red velvet cake come from the buttermilk, vinegar, cocoa powder, and cream cheese frosting. Some red velvet cake recipes use only a tablespoon or two of cocoa powder, giving virtually no chocolate flavor. This leads some people to think that red velvet cake is simply a white cake dyed red.</p>
+            <p class="card-text">   </p>
           </div>
         </div>
       </div>
@@ -99,8 +115,9 @@ div.desc {
       </div>
 
     </div>
+<script src="main.js"></script>
 
-    <!-- The Modal -->
+    <!-- The Modal enabling it to close  -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img_modal">
